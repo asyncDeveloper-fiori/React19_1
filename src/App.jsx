@@ -1,30 +1,33 @@
-import FunctionCall from './components/FunctionCall';
-import StateComponent from './components/StateComponent';
-import { ConditionalRendering } from './components/ConditionalRendering';
-import PropComponent from './components/PropComponent';
-import InputComponent from './components/InputComponent';
-import Users from './components/Users';
-import EffectComponent from './components/EffectComponet';
-import ConditionalStyling from './components/ConditionalStyling';
-import ReferenceComponent from './components/ReferenceComponent';
+import FunctionCall from "./components/FunctionCall";
+import StateComponent from "./components/StateComponent";
+import { ConditionalRendering } from "./components/ConditionalRendering";
+import PropComponent from "./components/PropComponent";
+import InputComponent from "./components/InputComponent";
+import Users from "./components/Users";
+import EffectComponent from "./components/EffectComponet";
+import ConditionalStyling from "./components/ConditionalStyling";
+import ReferenceComponent from "./components/ReferenceComponent";
 // import 'bootstrap/dist/css/bootstrap.min.css';
-import Button from 'react-bootstrap/Button';
-import { useRef, useState } from 'react';
-import FwdRefComponent from './components/FwdRefComponent';
-import FormStatusComponent from './components/FormStatusComponet';
-import DerivedStateComponent from './components/DerivedStateComponent';
-import { ActionStateComponent } from './components/ActionStateComponent';
-import { CustomHookComponent } from './components/CustomHookComponent';
-import { SubjectContext } from './components/ContextData';
-import SubjectComponent from './components/SubjectComponent';
-import { NavBar } from './NavBar';
-import { Route, Routes } from 'react-router';
+import Button from "react-bootstrap/Button";
+import { useRef, useState } from "react";
+import FwdRefComponent from "./components/FwdRefComponent";
+import FormStatusComponent from "./components/FormStatusComponet";
+import DerivedStateComponent from "./components/DerivedStateComponent";
+import { ActionStateComponent } from "./components/ActionStateComponent";
+import { CustomHookComponent } from "./components/CustomHookComponent";
+import { SubjectContext } from "./components/ContextData";
+import SubjectComponent from "./components/SubjectComponent";
+import { NavBar } from "./NavBar";
+import { Route, Routes } from "react-router";
+import ContactPage from "./components/ContactPage";
+import DepartmentComponent from "./components/nested/DepartmentComponent";
+import StudentComponent from "./components/nested/StudentComponent";
 
 function App() {
   // var user = 'Sam';
   // const inputRef = useRef(null);
 
-  const [subject, setSubject] = useState('');
+  const [subject, setSubject] = useState("");
 
   // function fwdRefExecute() {
   //   inputRef.current.focus();
@@ -69,8 +72,14 @@ function App() {
       <NavBar />
       <Routes>
         <Route path="/" element={<h1 className="p-4 text-3xl">Home Page</h1>} />
-        <Route path="/about" element={<h1 className="p-4 text-3xl">About Page</h1>} />
-        <Route path="/contact" element={<h1 className="p-4 text-3xl">Contact Page</h1>} />
+        <Route
+          path="/about"
+          element={<h1 className="p-4 text-3xl">About Page</h1>}
+        />
+        <Route path="/contact" element={<ContactPage />}>
+            <Route path="department" element={<DepartmentComponent/>} />
+            <Route path="student" element={<StudentComponent/>} />
+        </Route>
       </Routes>
     </>
   );
