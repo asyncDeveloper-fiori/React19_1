@@ -104,3 +104,9 @@ Lesser load on server
 Browser router -> component that enables client side routing using browser's history API
 Routes -> it renders appropriate component based on current URL, component
 Route -> It defined a path and a component to be rendered.
+
+
+NavLink vs Link
+Link works as a normal link without adding any active class
+NavLink adds a class active to the element we are applying it on.
+We can also change the className to something other than active.
