@@ -95,3 +95,12 @@ Suppose there are various components and one inside another like
 inside App there is college and in college there is student and inside it there is student
 so to pass data from app to student we use context api so we can transfer directly from app to student without passing props to each level
 prop drilling passing props to each level from parent to child
+
+
+REACT ROUTER
+While using with react use the library not the framework (easy)
+Client side routing -> means there is no request from server, frontend app on browser handles routing by itself
+Lesser load on server
+Browser router -> component that enables client side routing using browser's history API
+Routes -> it renders appropriate component based on current URL, component
+Route -> It defined a path and a component to be rendered.
