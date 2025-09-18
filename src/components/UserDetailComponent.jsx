@@ -21,7 +21,9 @@ function UserDetailComponent() {
                             <Link to={`/userdetails/${user.id}`}>{user.name}</Link>
                         </div>
                     ))
+                    
                 }
+                <Link to='/userdetails/10/sam1'>sam1</Link>
         </div>
     </div>
   )

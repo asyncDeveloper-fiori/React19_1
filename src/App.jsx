@@ -84,7 +84,7 @@ function App() {
         </Route>
 
         <Route path="/userdetail" element={<UserDetailComponent/>} />
-        <Route path="/userdetails/:id" element={<UserDetails />} />
+        <Route path="/userdetails/:id/:name?" element={<UserDetails />} />
       </Routes>
     </>
   );
