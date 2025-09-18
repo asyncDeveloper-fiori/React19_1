@@ -22,6 +22,8 @@ import { Route, Routes } from "react-router";
 import ContactPage from "./components/ContactPage";
 import DepartmentComponent from "./components/nested/DepartmentComponent";
 import StudentComponent from "./components/nested/StudentComponent";
+import UserDetailComponent from "./components/UserDetailComponent";
+import UserDetails from "./components/UserDetails";
 
 function App() {
   // var user = 'Sam';
@@ -80,6 +82,9 @@ function App() {
             <Route path="department" element={<DepartmentComponent/>} />
             <Route path="student" element={<StudentComponent/>} />
         </Route>
+
+        <Route path="/userdetail" element={<UserDetailComponent/>} />
+        <Route path="/userdetails/:id" element={<UserDetails />} />
       </Routes>
     </>
   );
