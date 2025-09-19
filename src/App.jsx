@@ -24,6 +24,7 @@ import DepartmentComponent from "./components/nested/DepartmentComponent";
 import StudentComponent from "./components/nested/StudentComponent";
 import UserDetailComponent from "./components/UserDetailComponent";
 import UserDetails from "./components/UserDetails";
+import UserComponent from "./components/APIData/UserComponent";
 
 function App() {
   // var user = 'Sam';
@@ -85,6 +86,8 @@ function App() {
 
         <Route path="/userdetail" element={<UserDetailComponent/>} />
         <Route path="/userdetails/:id/:name?" element={<UserDetails />} />
+
+        <Route path="/userData" element={<UserComponent />} />
       </Routes>
     </>
   );
