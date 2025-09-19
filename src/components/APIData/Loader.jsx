@@ -19,9 +19,9 @@ function Loader() {
             !loader ? <div>
                 {
                     postData.map((post,index)=>(
-                        <div key={index}>
-                            <p>{post.title}</p>
-                            <p>{post.views}</p>
+                        <div key={index} className='flex gap5 m-1 p-1'>
+                            <p className='m-1'>{post.title}</p>
+                            <p className='m-1'>{post.views}</p>
                         </div>
                     ))
                 }
