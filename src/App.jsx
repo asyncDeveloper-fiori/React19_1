@@ -27,6 +27,7 @@ import UserDetails from "./components/UserDetails";
 import UserComponent from "./components/APIData/UserComponent";
 import Loader from "./components/APIData/Loader";
 import PostMethodComponent from "./components/APIData/PostMethodComponent";
+import DeleteApiComponent from "./components/APIData/DeleteApiComponent";
 
 function App() {
   // var user = 'Sam';
@@ -91,8 +92,9 @@ function App() {
 
         <Route path="/userData" element={<UserComponent />} />
       </Routes>
-      <Loader />
+      {/* <Loader /> */}
       <PostMethodComponent />
+      <DeleteApiComponent />
     </>
   );
 }

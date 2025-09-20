@@ -19,11 +19,11 @@ function UserComponent() {
 
       <div>
         <table>
-          <tr>
+          <thead>
             <th className="px-10">FirstName</th>
             <th className="px-10">Username</th>
             <th className="px-10">Email</th>
-          </tr>
+          </thead>
           {users.map((user, index) => (
             <tr key={index}>
               <td className="text-zinc-400 px-10">{user.firstName}</td>
